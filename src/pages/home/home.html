@@ -1,0 +1,18 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Ionic 3 Simple Chat</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+		<ion-item>
+			<ion-label floating>Username</ion-label>
+			<ion-input type="text" [(ngModel)]="username"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<button ion-button block outline (click)="loginUser()">Login</button>
+		</ion-item>
+	</ion-list>
+</ion-content>

@@ -1,0 +1,80 @@
+page-chat {
+	ion-toolbar {
+		margin: 0 !important;
+		padding: 0 !important;
+		min-height: auto !important;
+	}
+
+	.message-left {
+		float: left;
+		clear: both;
+	}
+
+	.message-left.innerMessage {
+		background: color($colors, 'secondary');
+	}
+
+	.message-right {
+		float: right;
+		clear: both;
+	}
+
+	.message.special {
+		overflow: hidden;
+		text-align: center;
+		width: 100%;
+
+		.innerMessage {
+			background: none !important;
+			color: #888 !important;
+			font-size: 8px !important;
+			font-weight: 700 !important;
+			padding: 0 !important;
+			letter-spacing: 1px;
+			margin: 10px 0 !important;
+			text-transform: uppercase;
+			display: inline-block;
+			width: 100%;
+		}
+	}
+
+	.innerMessage {
+		display: inline-block;
+		padding: 5px 10px;
+		background: color($colors, 'primary');
+		margin: 5px;
+		color: #fff;
+		border-radius: 4px;
+		word-break: break-all;
+
+		.username {
+			font-weight: bold;
+			font-size: 80%;
+		}
+
+		.message-text {
+			font-size: 120%;
+		}
+	}
+
+	#footer {
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+
+		.elem {
+			.text-input-md {
+				margin: 9px 10px;
+			}
+
+			button {
+				border-radius: 0;
+				margin: 0;
+			}
+		}
+
+		.elem:first-child {
+			flex-grow: 1;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Chat</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div id="chatMessages">
+		<div *ngFor="let message of messages" [class]="message.specialMessage ? 'message special' : 'message'">
+			<div [class]="message.username == username ? 'innerMessage message-right' : 'innerMessage message-left'">
+				<div class="username">{{ message.username }}</div>
+				<div class="message-text">{{ message.message }}</div>
+			</div>
+		</div>
+	</div>
+</ion-content>
+
+<ion-footer>
+	<div id="footer">
+		<div class="elem">
+			<ion-input type="text" [(ngModel)]="message" placeholder="Enter message..."></ion-input>
+		</div>
+
+		<div class="elem">
+			<button ion-button icon-only (click)="sendMessage()">
+				<ion-icon name="send"></ion-icon>
+			</button>
+		</div>
+	</div>
+</ion-footer>
